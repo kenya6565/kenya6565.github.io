@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akijikan</title>
+<style>
+:root { color-scheme: light dark; --fg: #1d1d1f; --bg: #ffffff; --muted: #6e6e73; --link: #0a58ca; }
+@media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --bg: #161618; --muted: #a1a1a6; --link: #6ea8fe; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+a { color: var(--link); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; overflow-wrap: anywhere; }
+.muted { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Akijikan</h1>
+<p>Google カレンダーの空き時間を「11/3 (火) 11:00 ~ 15:00」の形でクリップボードにコピーする、Raycast（macOS）の拡張機能です。
+作者 <a href="https://github.com/kenya6565">kenya6565</a> が自分の日程調整のために作った個人用のツールで、一般には配布していません。</p>
+
+<h2>できること</h2>
+<ul>
+<li>サインインして登録した Google アカウントのカレンダーが、すべて空いている時間を探します</li>
+<li>予定の前後の余白、土日・祝日の除外、候補にする時間帯などを Raycast の設定で変えられます</li>
+<li>結果はクリップボードにコピーされ、そのままメールやチャットに貼り付けられます</li>
+</ul>
+
+<h2>Google から受け取るデータ</h2>
+<ul>
+<li>カレンダーの空き時間情報（「予定あり」の時間帯だけ。スコープ <code>calendar.freebusy</code>）。予定のタイトル・参加者・場所・説明は要求しません</li>
+<li>サインインしたアカウントのメールアドレス（どのアカウントを登録したかを表示するため。スコープ <code>openid</code>・<code>email</code>）</li>
+</ul>
+<p>受け取ったデータは利用者の Mac の中だけで処理され、作者を含む第三者のサーバーには送られません。
+詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<p class="muted"><a href="privacy.html">プライバシーポリシー</a> ・ <a href="terms.html">利用規約</a></p>
+</main>
+</body>
+</html>
